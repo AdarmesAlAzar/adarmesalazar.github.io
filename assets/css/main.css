@@ -32,12 +32,12 @@ html
 
 body
 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
 
-    color: #fff;
-    background: #fff;
+    color: #ffffff;
+    background: #ffffff;
 
     -webkit-font-smoothing: antialiased;
 }
@@ -47,50 +47,38 @@ h2,
 h3,
 h4,
 h5,
-h6
-{
-    font-weight: normal;
-
-    letter-spacing: .02em;
-
-    color: #fff;
+h6 {
+    font-weight: 600; /* Hace que los títulos sean más negritas */
+    letter-spacing: .02em; /* Espaciado entre letras */
+    color: #ffffff; /* Color negro para los títulos */
+    text-shadow: 3px 3px 5px rgb(0, 0, 0); /* Sombra para resaltar */
+    margin-bottom: 20px; /* Margen inferior para separar los títulos del contenido */
 }
 
-h1
-{
-    font-size: 7.2rem;
+h1 {
+    font-size: 7.2rem; /* Tamaño del texto para h1 */
 }
 
-h2
-{
-    font-size: 3.9rem;
+h2 {
+    font-size: 3.9rem; /* Tamaño del texto para h2 */
 }
 
-h3
-{
-    font-size: 3.4rem;
+h3 {
+    font-size: 3.4rem; /* Tamaño del texto para h3 */
 }
 
-h4
-{
-    font-size: 2.9rem;
+h4 {
+    font-size: 2.9rem; /* Tamaño del texto para h4 */
 }
 
-h5
-{
-    font-size: 2.3rem;
+h5 {
+    font-size: 2.3rem; /* Tamaño del texto para h5 */
 }
 
-h6
-{
-    font-size: 1.9rem;
+h6 {
+    font-size: 1.9rem; /* Tamaño del texto para h6 */
 }
 
-p
-{
-    font-size: 1.8rem;
-    line-height: 1.7em;
-}
 
 a,
 a:hover,

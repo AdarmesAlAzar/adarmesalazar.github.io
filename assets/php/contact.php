@@ -1,10 +1,10 @@
 <?php
 
 // ENTER YOUR EMAIL
-$emailTo = "yourmail@example.com";
+$emailTo = "yezid@adarme.es";
 
 // ENTER IDENTIFIER
-$emailIdentifier =  "Message sent via contact form from " . $_SERVER["SERVER_NAME"];
+$emailIdentifier =  "Mensaje de AdarmeS al azar " . $_SERVER["SERVER_NAME"];
 
 
 if($_POST) {
