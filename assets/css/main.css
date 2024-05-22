@@ -1,223 +1,116 @@
-/******************************************************************
-
-
-	------------------------
-	-- TABLE OF CONTENTS --
-	------------------------
-	
-	--  01. Basic
-	--  02. Preloader
-    --  03. Image Container
-    --  04. Content Area
-    --  05. Content Area --> Intro
-    --  06. Content Area --> About
-    --  07. Content Area --> Service
-    --  08. Content Area --> Work
-    --  09. Content Area --> Contact
-    --  10. Content Area --> Footer
- 
- 
- ******************************************************************/
-
-
-
-
 /** 1. Basic
 *******************************************************************/
 
-html
-{
+html {
     font-size: 10px;
 }
 
-body
-{
-    font-family: 'Open Sans', sans-serif;
+body {
+    font-family: 'Helvetica', sans-serif;
     font-weight: 300;
     font-style: normal;
-
-    color: #ffffff;
-    background: #ffffff;
-
+    color: whitesmoke;
+    background: var(--bg-color);
     -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 600; /* Hace que los títulos sean más negritas */
-    letter-spacing: .02em; /* Espaciado entre letras */
-    color: #ffffff; /* Color negro para los títulos */
-    text-shadow: 3px 3px 5px rgb(0, 0, 0); /* Sombra para resaltar */
-    margin-bottom: 20px; /* Margen inferior para separar los títulos del contenido */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--font-color);
+    text-shadow: 3px 3px 5px rgb(179, 179, 179);
+    margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 7.2rem; /* Tamaño del texto para h1 */
-}
+h1 { font-size: 7.2rem; }
+h2 { font-size: 3.9rem; }
+h3 { font-size: 3.4rem; }
+h4 { font-size: 2.9rem; }
+h5 { font-size: 2.3rem; }
+h6 { font-size: 1.9rem; }
 
-h2 {
-    font-size: 3.9rem; /* Tamaño del texto para h2 */
-}
-
-h3 {
-    font-size: 3.4rem; /* Tamaño del texto para h3 */
-}
-
-h4 {
-    font-size: 2.9rem; /* Tamaño del texto para h4 */
-}
-
-h5 {
-    font-size: 2.3rem; /* Tamaño del texto para h5 */
-}
-
-h6 {
-    font-size: 1.9rem; /* Tamaño del texto para h6 */
-}
-
-
-a,
-a:hover,
-a:focus
-{
+a, a:hover, a:focus {
     cursor: pointer;
-    -webkit-transition: all 300ms ease;
-         -o-transition: all 300ms ease;
-            transition: all 300ms ease;
+    transition: all 300ms ease;
     text-decoration: none;
-
-    color: #fff;
+    color: var(--primary-color);
 }
 
-button
-{
-    border: 2px solid #fff;
+button {
+    border: 2px solid var(--primary-color);
     background: none;
 }
 
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active
-{
-    border-color: #fff !important;
+.btn-primary:active {
+    border-color: var(--primary-color) !important;
     outline: none !important;
     background: none !important;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
-@media (max-width:600px)
-{
-    html
-    {
+@media (max-width: 600px) {
+    html {
         font-size: 8px;
     }
 }
 
-@media (max-width:500px)
-{
-    html
-    {
+@media (max-width: 500px) {
+    html {
         font-size: 7px;
     }
 }
 
-
-
 /** 2. Preloader
 *******************************************************************/
 
-.preloader
-{
+.preloader {
     position: fixed;
     z-index: 100000;
     top: 0;
     right: 0;
-
     overflow: hidden;
-
     width: 100%;
     height: 100%;
-
-    background: #fff;
+    background: var(--bg-color);
 }
 
-.preloader.hide-preloader
-{
+.preloader.hide-preloader {
     width: 0;
-
-    -webkit-transition: .7s ease .3s;
-         -o-transition: .7s ease .3s;
-            transition: .7s ease .3s;
+    transition: .7s ease .3s;
 }
 
-.preloader .spinner
-{
+.preloader .spinner {
     position: absolute;
     top: 50%;
     left: 50%;
-
-    display: block;
-
     width: 50px;
     height: 50px;
     margin-top: -25px;
     margin-left: -25px;
-
-    -webkit-animation: spinner-pulse .6s infinite ease-in-out;
-            animation: spinner-pulse .6s infinite ease-in-out;
+    animation: spinner-pulse .6s infinite ease-in-out;
     text-align: center;
-
     opacity: 1;
     border-radius: 100%;
-    background-color: #111;
+    background-color: var(--secondary-color);
 }
 
-.preloader.hide-preloader .spinner
-{
-    -webkit-transition: .3s ease;
-         -o-transition: .3s ease;
-            transition: .3s ease;
-
+.preloader.hide-preloader .spinner {
+    transition: .3s ease;
     opacity: 0;
 }
 
-@-webkit-keyframes spinner-pulse
-{
-    0%
-    {
-        -webkit-transform: scale(0);
+@keyframes spinner-pulse {
+    0% {
+        transform: scale(0);
     }
-    100%
-    {
-        -webkit-transform: scale(1.0);
-
+    100% {
+        transform: scale(1.0);
         opacity: 0;
     }
 }
-
-@keyframes spinner-pulse
-{
-    0%
-    {
-        -webkit-transform: scale(0);
-                transform: scale(0);
-    }
-    100%
-    {
-        -webkit-transform: scale(1.0);
-                transform: scale(1.0);
-
-        opacity: 0;
-    }
-}
-
-
 
 /** 3. Image Container
 *******************************************************************/
