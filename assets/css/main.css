@@ -4,7 +4,26 @@
 html {
     font-size: 10px;
 }
+:root {
+    --font-color: #333; /* Nuevo color de fuente gris oscuro */
+}
 
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--font-color); /* Utilizar la variable para el color de la fuente */
+    background: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: .02em;
+    color: var(--font-color); /* Utilizar la variable para el color de la fuente */
+    text-shadow: 3px 3px 5px rgb(179, 179, 179);
+    margin-bottom: 20px;
+}
 body {
     font-family: 'Helvetica', sans-serif;
     font-weight: 300;
